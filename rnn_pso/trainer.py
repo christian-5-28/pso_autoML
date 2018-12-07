@@ -155,8 +155,8 @@ class TrainerSearch:
             temp_fit = elem[1].valid_ppl
             temp_id = elem[1].geno_id
 
-            self.logger.info('particle gen id: {}, ppl: {}, gen: {}'.format(temp_fit,
-                                                                            temp_id,
+            self.logger.info('particle gen id: {}, ppl: {}, gen: {}'.format(temp_id,
+                                                                            temp_fit,
                                                                             temp_gen)
                              )
 
