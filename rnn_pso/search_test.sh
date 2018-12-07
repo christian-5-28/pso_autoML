@@ -1,0 +1,1 @@
+python3 search_main.py --population_size=32 --epochs=400 --seed=1  --num_intermediate_nodes=2 --concat=2 --w_inertia=0.5 --c_local=1 --seed_range_start=1627 --seed_range_end=1631 --start_using_pso=150 --pso_window=10

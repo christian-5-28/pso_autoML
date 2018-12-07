@@ -1,0 +1,1 @@
+python3 search_main.py --population_size=1 --epochs=400 --seed=1267  --num_intermediate_nodes=2 --concat=2 --w_inertia=0.5 --c_local=1 --evaluate --gen_ids_start=0 --gen_ids_range=32 --uniform_genos_init
