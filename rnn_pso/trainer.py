@@ -123,11 +123,6 @@ class TrainerSearch:
                 fitnesses_dict[particle_id] = genotypes_fit_dict[geno_id]
                 continue
 
-            if geno_id in [0, 1, 2, 3, 4, 5, 6, 7, 24, 25, 26, 27, 28, 29, 30, 31]:
-                self.logger.info('particle already validated, genotype: {} {}'.format(geno_id, new_genotype))
-                fitnesses_dict[particle_id] = 100000
-                continue
-
             # add the geno id to the seen clusters
             cluster_validated.add(geno_id)
 
@@ -300,13 +295,6 @@ class TrainerSearch:
                     len(clusters_seen) < len(self.cluster_dict)):  # and not args.use_fixed_slot:
                     self.logger.info('particle already trained, genotype: {}, data len {}, i {}'.format(genotype_id,
                                                                                                         self.train_data.size(0),
-                                                                                                        i))
-                    continue
-
-                if genotype_id in [0, 1, 2, 3, 4, 5, 6, 7, 24, 25, 26, 27, 28, 29, 30, 31]:
-                    self.logger.info('particle already trained, genotype: {}, data len {}, i {}'.format(genotype_id,
-                                                                                                        self.train_data.size(
-                                                                                                            0),
                                                                                                         i))
                     continue
 

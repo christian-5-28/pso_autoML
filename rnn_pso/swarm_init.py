@@ -77,17 +77,6 @@ class Swarm:
             self.set_gen_ids = set()
 
         # initialize global_best
-        '''
-        self.gbest_id = np.random.randint(0, self.population_size)
-        self.global_best = self.population[self.gbest_id].position.clone()
-        self.global_best_fit = np.Inf
-        '''
-        # initialize global_best
-        '''
-        self.global_best = self.population[0].position.clone()
-        self.gbest_id = 0
-        self.global_best_fit = np.Inf
-        '''
         self.global_best = self.population[0].copy_particle()
         self.gbest_id = 0
         self.global_best_fit = self.global_best.best_fit
@@ -209,7 +198,7 @@ class Swarm:
         # initialize the new starting block
         new_start_nodes = []
         for new_node in range(len(new_nodes)):
-            new_start_nodes.append((self.operations[0], 1))
+            new_start_nodes.append((self.operations[0], 0))
 
         gene = []
         gene.extend(old_geno.recurrent)
