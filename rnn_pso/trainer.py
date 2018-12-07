@@ -572,6 +572,8 @@ class TrainerSearch:
             # initial genotype
             genotype = self.swarm.global_best.genotype()
 
+        self.particles_fitnesses = {}
+
         # initializing the model
         if self.args.use_pretrained:
             self.logger.info('PRETRAINED MODEL LOADED!')
